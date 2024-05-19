@@ -1,8 +1,10 @@
-Here is your key: bf704ada
+Here is your key: f2e0d321
 
 Please append it to all of your API requests,
 
-OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=bf704ada
+OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=f2e0d321
 
-Click the following URL to activate your key: http://www.omdbapi.com/apikey.aspx?VERIFYKEY=4a813320-43f7-4a34-9bd3-256145cc81a1
+Click the following URL to activate your key: http://www.omdbapi.com/apikey.aspx?VERIFYKEY=eaaa7aa9-f950-43a1-89d9-5d873128441e
 If you did not make this request, please disregard this email.
+
+http://www.omdbapi.com/?i=tt3896198&apikey=${KEY}
