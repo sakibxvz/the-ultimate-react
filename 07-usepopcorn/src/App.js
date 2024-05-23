@@ -160,6 +160,18 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 		onAddWatched(newWatchedMovie);
 		onCloseMovie();
 	}
+	useEffect(
+		function () {
+			function callback(e) {
+				if (e.code === 'Escape') {
+					onCloseMovie();
+				}
+			}
+			document.addEventListener('keydown', callback);
+			return () => document.removeEventListener('keydown', callback);
+		},
+		[onCloseMovie]
+	);
 
 	useEffect(
 		function () {
@@ -376,8 +388,8 @@ export default function App() {
 					setMovies(data.Search);
 					setError('');
 				} catch (err) {
-					if (err.name != "AbortError") {
-					setError(err.message);
+					if (err.name != 'AbortError') {
+						setError(err.message);
 					}
 				} finally {
 					setIsLoading(false);
@@ -388,6 +400,7 @@ export default function App() {
 				setError('');
 				return;
 			}
+			handleCloseMovie();
 			fetchMovies();
 			return function () {
 				controller.abort();
