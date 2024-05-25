@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { StarRating } from './StarRating';
 
 const KEY = 'f2e0d321';
@@ -16,6 +16,12 @@ function Logo() {
 }
 
 function Search({ query, setQuery }) {
+	const inputEl = useRef(null)
+
+	useEffect(function () {
+		inputEl.current.focus()
+	})
+
 	return (
 		<input
 			className='search'
@@ -23,6 +29,7 @@ function Search({ query, setQuery }) {
 			placeholder='Search movies...'
 			value={query}
 			onChange={(e) => setQuery(e.target.value)}
+			ref={inputEl}
 		/>
 	);
 }
@@ -30,7 +37,7 @@ function Search({ query, setQuery }) {
 function NumResults({ movies }) {
 	return (
 		<p className='num-results'>
-			Found <strong>{movies.length}</strong> results
+			Found <strong>{movies?.length}</strong> results
 		</p>
 	);
 }
@@ -232,7 +239,7 @@ function WatchedSummary({ watched }) {
 				</p>
 				<p>
 					<span>⏳</span>
-					<span>{avgRuntime} min</span>
+					<span>{avgRuntime.toFixed(2)} min</span>
 				</p>
 			</div>
 		</div>
@@ -301,11 +308,15 @@ function NavBar({ children }) {
 
 export default function App() {
 	const [movies, setMovies] = useState([]);
-	const [watched, setWatched] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState('');
 	const [query, setQuery] = useState('');
 	const [selectedId, setSelectedId] = useState(null);
+	// const [watched, setWatched] = useState([]);
+	const [watched, setWatched] = useState(function () {
+		const storedValue = localStorage.getItem('watched');
+		return JSON.parse(storedValue);
+	});
 
 	function handleSelectMovie(id) {
 		setSelectedId((selectedId) => (id === selectedId ? null : id));
@@ -317,11 +328,20 @@ export default function App() {
 
 	function handleAddWatched(movie) {
 		setWatched((watched) => [...watched, movie]);
+
+		// localStorage.setItem('watched', JSON.stringify([...watched, movie]));
 	}
 
 	function handleDeleteWatched(id) {
 		setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
 	}
+
+	useEffect(
+		function () {
+			localStorage.setItem('watched', JSON.stringify(watched));
+		},
+		[watched]
+	);
 
 	useEffect(
 		function () {
