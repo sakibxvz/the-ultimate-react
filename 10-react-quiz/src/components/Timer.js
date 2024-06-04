@@ -8,7 +8,7 @@ function Timer({ dispatch, secondsRemaining }) {
 			dispatch({ type: 'tick' });
 		}, 1000);
 		return () => clearInterval(id);
-	}, []);
+	}, [0]);
 	return (
         <div className='timer'>
             {mins < 10 && '0'}
