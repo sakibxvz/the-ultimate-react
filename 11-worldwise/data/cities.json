@@ -35,66 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": "98443197"
-    },
-    {
-      "cityName": "Dhaka",
-      "country": "Bangladesh",
-      "emoji": "BD",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 47.53586782505711,
-        "lng": 49.376933665713324
-      },
-      "id": "98443358"
-    },
-    {
-      "id": "de90",
-      "cityName": "Olby",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-06-08T17:42:25.605Z",
-      "notes": "test",
-      "position": {
-        "lat": "45.76493688373468",
-        "lng": "2.875266298616288"
-      }
-    },
-    {
-      "id": "e7f6",
-      "cityName": "In Salah",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2024-06-08T17:45:28.850Z",
-      "notes": "testad",
-      "position": {
-        "lat": "27.67446132581372",
-        "lng": "3.1143734895927504"
-      }
-    },
-    {
-      "id": "97fb",
-      "cityName": "I-n-Amguel",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2024-06-08T17:55:22.202Z",
-      "notes": "dfg",
-      "position": {
-        "lat": "25.081116293675475",
-        "lng": "2.150301189241084"
-      }
-    },
-    {
-      "id": "58b4",
-      "cityName": "Aougrout",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2024-06-08T17:57:47.560Z",
-      "notes": "ddgg",
-      "position": {
-        "lat": "28.99702094013914",
-        "lng": "1.1396031840326695"
-      }
     }
   ]
 }
