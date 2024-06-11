@@ -1,6 +1,3 @@
 {
-	"extends": "react",
-	"rules": {
-		"no-unused-vars": ["warn", { "varsIgnorePattern": "^_" }]
-	}
+  "extends": "react-app"
 }
