@@ -1,0 +1,3 @@
+Compund omponent
+Redux Thunk
+Redux Toolkit
