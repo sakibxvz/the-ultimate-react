@@ -1,0 +1,8 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindConfig": "tailwind.config.js",
+  "tailwindFunctions": ["clsx"],
+  "tailwindAttributes": ["myClassList"],
+  "tailwindPreserveWhitespace": true,
+  "tailwindPreserveDuplicates": true
+}

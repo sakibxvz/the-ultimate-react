@@ -2,4 +2,4 @@ Compund omponent
 Redux Thunk
 Redux Toolkit
 
-React Router -Loader,useLoaderData,useNavigation,useRouteError,errorElement
+React Router -Loader || action,useLoaderData,useNavigation,useRouteError,errorElement
