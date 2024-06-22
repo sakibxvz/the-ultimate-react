@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, lazy, useContext, useEffect, useState } from 'react';
 import { faker } from '@faker-js/faker';
 
 function createRandomPost() {
@@ -121,6 +121,8 @@ function Posts() {
 		</section>
 	);
 }
+
+
 
 function FormAddPost() {
 	const [title, setTitle] = useState('');
