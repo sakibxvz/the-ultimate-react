@@ -5,3 +5,4 @@ Redux Toolkit
 React Router -Loader || action,useLoaderData,useNavigation,useRouteError,errorElement
 
 Redux Toolkit - reselect
+Redux Thunk - extraReducers , builder.addCase
