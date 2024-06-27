@@ -2,10 +2,12 @@ Compund omponent
 Redux Thunk
 Redux Toolkit
 
-React Router -Loader || action,useLoaderData,useNavigation,useRouteError,errorElement,useFetcher
+React Router -Loader || action,useLoaderData,useNavigation,useRouteError,errorElement,useFetcher,fetcher.Form
 
 Redux Toolkit - reselect
 Redux Thunk - extraReducers , builder.addCase
 
 
 JS -> coalescing operator (??) and Optional Chaining ?.
+
+Method: PUT, PTACH
