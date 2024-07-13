@@ -7,6 +7,8 @@ React Router -Loader || action,useLoaderData,useNavigation,useRouteError,errorEl
 Redux Toolkit - reselect
 Redux Thunk - extraReducers , builder.addCase
 
+tanstack/react-query -> 
+
 
 JS -> coalescing operator (??) and Optional Chaining ?.
 
